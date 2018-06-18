@@ -11,10 +11,14 @@
 `./sh/limpar.sh`
 
 * Necessário:
+
 Redis
+
 Sidekiq
 
+
 * Iniciar servidor:
+
 `redis-server`
 
 `bundle exec sidekiq`
