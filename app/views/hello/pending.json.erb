@@ -1,0 +1,9 @@
+{
+  "response": {
+    "text": "<%=@texto%>",
+    <%if @estado !="fail"%>
+      "link": "<%=@ficheiro.zip_path%>"
+    <%end%>
+  },
+  "status": "<%=@estado%>"
+}

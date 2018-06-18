@@ -1,0 +1,56 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, or any plugin's
+// vendor/assets/javascripts directory can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file. JavaScript code in this file should be added after the last require_* statement.
+//
+// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+// about supported directives.
+//
+//= require jquery3
+//= require rails-ujs
+//= require js.cookie
+//= require activestorage
+//= require turbolinks
+//= require_tree .
+
+  function fAlerta(mensagem,link) {
+    var  zAlerta = document.createElement("div");
+    zAlerta.className = "alerta";
+    console.log("debug0");
+    zAlerta.innerHTML= '<a download="'+link+'" href="'+link+'">'
+                     +'<%=image_tag "diskette"%></a>'
+                     + "<span>"+mensagem+"</span>";
+    console.log("debug1");
+    zAlerta.setAttribute('style','display:none;');
+    $(zAlerta).insertBefore("div:eq(0)");
+    console.log("debug2");
+    $(".alerta").fadeIn().delay(10000).fadeOut();
+    console.log("Devia ter funcionado...\n"+mensagem);
+  }
+
+$(document).ready(function(){
+  console.log(Cookies.get('pid'))
+  console.log("jQuery ativado");
+
+
+  // window.setInterval(function(){
+  //   if(Cookies.get('pid')!="") {
+  //     $.ajax({
+  //     type: "GET",
+  //     url: "/update/"+ Cookies.get('pid'),
+  //     dataType: "json",
+  //     success: function(data){
+  //       if(data.status=="sucess!") {
+  //         alert(data.response.text)
+  //       }
+  //       else {console.log(data.status);}
+  //     }
+  //   });
+  //   }
+  // },10000);
+
+});

@@ -1,0 +1,24 @@
+
+  <!-- <div class="alerta">
+    <%=image_tag "diskette"%>
+    <span>O seu ficheiro está pronto...</span>
+  </div> -->
+
+
+
+
+<div class="teste">
+  <%=@teste%>
+<br>
+<%=button_to "Teste Cabo",btnteste_path, remote:true%>
+<br><br>
+  <%= form_tag({:action => 'upload_file'}, :multipart => true) do %>
+    <p><label for="upload_file">Select File</label>
+    <%= file_field 'upload', 'datafile' %></p>
+    <%= submit_tag "Upload" %>
+  <% end %>
+</div>
+
+<div class="teste conteudo exposicao">
+  <%=render 'conteudo'%>
+</div>

@@ -1,0 +1,16 @@
+<% @ficheiros.each do |ficheiro| %>
+<div id="ficheiro<%=ficheiro.id%>">
+   <%= ficheiro.id %><br>
+   <%=image_tag ficheiro.path, class:"imagem"%><br>
+   <!-- <%= ficheiro.path %><br> -->
+   <%= link_to "Download", ficheiro.path,{download:ficheiro.path}%><br>
+   <%if ficheiro.zip == 2%>
+      <%= link_to "Download zip", ficheiro.zip_path,{download:ficheiro.zip_path}%><br><br>
+   <%elsif ficheiro.zip==0%>
+      <%= link_to "Fazer zip", zip_path(ficheiro), method: :post, class: "fazerzip" %><br><br>
+   <%else%>
+    <span>Zip a ser feito...
+   <%=image_tag "loading", class:"loading"%><br><br></span>
+  <%end%>
+</div>
+<% end %>

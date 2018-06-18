@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.teste {
+  display:block;
+  margin:auto;
+  border-radius: 10px;
+  padding:10px;
+  text-align: center;
+  background-color: lightgray;
+  width: 1000px;
+  margin-bottom:20px;
+}
+.imagem {
+  max-width: 200px;
+  max-height: 200px;
+}
+.alerta {
+  width: 20%;
+  padding: 15px;
+  background-color: rgba(40, 194, 241, 0.55);
+  border-radius: 10px;
+  border: solid 2px rgb(42, 82, 97);
+  color: rgb(5, 37, 88);
+  margin: 10px 5px 20px auto;
+  position: fixed;
+  top:0;
+  right: 0;
+}
+.exposicao {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.exposicao > div {
+  background-color: lightblue;
+  border-radius:10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding:10px
+}
+.alerta > a > img {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.loading {
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+  background-color: black;
+  padding: 2px;
+  border-radius: 100px;
+}
