@@ -12,9 +12,9 @@
 
 * Necessário:
 
-Redis
+**Redis**
 
-Sidekiq
+**Sidekiq**
 
 
 * Iniciar servidor:
