@@ -12,7 +12,7 @@ $(document).on 'turbolinks:load',
             if data.status is "sucess"
               console.log("Sucesso "+data.status)
               $.ajax({url: "/update/"+Cookies.get("pid")})
-              fAlerta(data.response.text,data.response.link)
+              fAlerta(data.response.text,data.response.link,data.response.nome)
             else if data.status is "fail"
               console.log("sem novidades")
         console.log("connected - "+Cookies.get("pid"))
@@ -22,7 +22,7 @@ $(document).on 'turbolinks:load',
 
       received: (data) ->
           $.ajax({url: "/update/"+Cookies.get("pid")})
-          fAlerta(data.content,data.link)
-          x = '<a download="'+data.link+'" href="'+data.link+'">Download zip</a><br><br>'
+          fAlerta(data.content,data.link,data.nome)
+          x = '<a download="'+data.nome+'.tar.gz" href="'+data.link+'">Download zip</a><br><br>'
           $("#ficheiro"+data.id).find("span").remove()
           $("#ficheiro"+data.id).append(x)

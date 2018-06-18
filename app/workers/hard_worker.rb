@@ -24,7 +24,8 @@ class HardWorker
       ActionCable.server.broadcast 'notificacoes_channel_'+cookie_utilizador,
                              content:"O seu ficheiro está pronto",
                              link:@ficheiro.zip_path,
-                             id:@ficheiro.id
+                             id:@ficheiro.id,
+                             nome:"Ficheiro_"+@ficheiro.id.to_s
       puts "Enviado: "+ 'notificacoes_channel_' + cookie_utilizador
 
       update = Update.new

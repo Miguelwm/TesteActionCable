@@ -2,6 +2,7 @@
   "response": {
     "text": "<%=@texto%>",
     <%if @estado !="fail"%>
+      "nome": "Ficheiro_<%=@ficheiro.id%>",
       "link": "<%=@ficheiro.zip_path%>"
     <%end%>
   },

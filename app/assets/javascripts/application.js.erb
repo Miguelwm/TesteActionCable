@@ -17,11 +17,11 @@
 //= require turbolinks
 //= require_tree .
 
-  function fAlerta(mensagem,link) {
+  function fAlerta(mensagem,link,nome) {
     var  zAlerta = document.createElement("div");
     zAlerta.className = "alerta";
     console.log("debug0");
-    zAlerta.innerHTML= '<a download="'+link+'" href="'+link+'">'
+    zAlerta.innerHTML= '<a download="'+nome+'.tar.gz" href="'+link+'">'
                      +'<%=image_tag "diskette"%></a>'
                      + "<span>"+mensagem+"</span>";
     console.log("debug1");
