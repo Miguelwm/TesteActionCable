@@ -1,24 +1,17 @@
-# README
+# Teste Action Cable
+gem install bundler
+bundle install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Comandos:
+rake db_m:rebuild
+./sh/limpar.sh
 
-Things you may want to cover:
+* Necessário:
+Redis
+Sidekiq
 
-* Ruby version
+* Iniciar servidor:
+redis-server
+bundle exec sidekiq
+rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
