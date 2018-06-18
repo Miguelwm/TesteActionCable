@@ -1,8 +1,9 @@
 #!/bin/bash
 # Limpar os dados
-SRC=/home/wiremaze/Documents/Rails/Teste/
+SRC=/home/wiremaze/Documents/Rails/Teste
 echo "Apagar ficheiros desnecessários"
-cd $SRC && rm -r public/uploads/ficheiros/*
+cd $SRC && rm -r public/uploads/ficheiros
+cd $SRC/public/uploads && mkdir ficheiros
 echo "Apagar ficheiros desnecessários[COMPLETED]"
 echo "Reconstruir Base de dados"
 cd $SRC && rake db_m:rebuild
